@@ -1,0 +1,15 @@
+{
+	"require": {
+		"twig/twig": "1.*",
+		"illuminate/database": "4.2.*"
+	},
+	"autoload": {
+		"classmap": [
+			"app/core",
+			"app/models"
+		],
+		"files": [
+			"app/database.php"
+		]
+	}
+}

@@ -1,0 +1,8 @@
+Options -Indexes -MultiViews +FollowSymLinks
+RewriteEngine on
+RewriteRule ^post/([0-9]+)$ ../post.php?post_id=$1
+
+RewriteRule ^posts/delete/([0-9]+)$ posts.php?delete=$1
+RewriteRule ^comments/delete/([0-9]+)$ comments.php?delete=$1
+RewriteRule ^comments/update/([0-9]+)$ comments.php?update=$1
+RewriteRule ^update/post/([0-9]+)$ update_post.php?post_id=$1

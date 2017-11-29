@@ -1,0 +1,20 @@
+Options -Indexes -MultiViews +FollowSymLinks
+
+RewriteEngine on
+RewriteCond %{HTTP_REFERER} !^http://(www\.)?localhost [NC]
+RewriteCond %{HTTP_REFERER} !^http://(www\.)?localhost.*$ [NC]
+RewriteRule \.(jpg|jpeg|png|gif|css|js|eot|svg|ttf|woff|woff2|pdf)$ - [F]
+
+
+
+
+RewriteRule ^(local|europe|world|sports|entertainment)$ category.php?cat_id=$1
+
+
+
+
+RewriteRule ^post/([0-9]+)$ post.php?post_id=$1
+RewriteRule ^post/delete/([0-9]+)$ post.php?delete=$1
+
+
+
